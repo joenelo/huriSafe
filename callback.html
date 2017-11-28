@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    jQuery.ajax( {
+        url: 'https://public-api.wordpress.com/rest/v1/sites/' + site_id + '/posts/new',
+        type: 'POST',
+        data: { content: 'testing test' },
+        beforeSend : function( xhr ) {
+            xhr.setRequestHeader( "Authorization", "BEARER " + access_token );
+        },
+        success: function( response ) {
+            // response
+        }
+    } );
+
+</script>
+
+
+</body>
+</html>

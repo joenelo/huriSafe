@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HuriSafe</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="src/libs/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+
+
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:bold" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Newton" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="src/components/windyApi/windy.css">
+    <link rel="stylesheet" type="text/css" href="src/components/homeawayApi/homeaway.css">
+
+
+</head>
+<body>
+
+<div id="top">
+    <h1>Welcome to HuriSafe!</h1>
+    <h2>You're one stop shop for finding a safe place to stay during bad weather</h2>
+    <h3>Please select an area on the map, and click the "Check For Properites" link.<br>
+    A series of properties will populate below the map. Thank you and Enjoy</h3>
+</div>
+<!-- Windy TY Section -->
+<div id="windyty"></div>
+<div id="windytyOverlay">
+    <p>Displayed parameters:<span id="state"></span></p>
+    <button id="play" type="submit" style="border: 0; background: transparent">
+        <img src="src/images/Play.png"  width="50" height="50" alt="submit"/> </button>
+    <button id="pause" type="submit" style="border: 0; background: transparent">
+        <img src="src/images/pause.png"  width="50" height="50" alt="submit"/> </button>
+
+    <input type="range" id="range" min="0" max="10" value="0" step="30" oninput="autoUpdate()" style="width:100%;">
+    <br />
+    <p>Overlays: <span id="overlays"> <a>wind</a> <a>temp</a> <a>pressure</a> <a>clouds</a> <a>rh</a> <a>gust</a> <a>lclouds</a> <a>waves</a> <a>swell</a> <a>wwaves</a> <a>swellperiod</a> <a>sst</a> <a>sstanom</a> <a>currents</a> </span></p>
+
+    <p>Levels: <span id="levels"><a>surface</a> <a>975h</a> <a>950h</a> <a>925h</a> <a>900h</a> <a>850h</a> <a>750h</a> <a>700h</a> <a>550h</a> <a>450h</a> <a>350h</a> <a>300h</a> <a>250h</a> <a>200h</a> <a>150h</a> </span></p>
+    <br />
+</div>
+
+<!-- HomeAway section. -->
+<div id="homeaway" style="width: 80%; height: auto; position: relative; margin-left: auto; margin-right: auto;"></div>
+
+<div id="homeawayOverlay"></div>
+
+
+<!-- Connect ro JS Files -->
+<script src="src/components/windyApi/windy.js"></script>
+<script src="src/components/homeawayApi/homeaway.js"></script>
+
+<script async defer src="https://api.windytv.com/v2.3/boot.js"></script>
+</body>
+</html>
+

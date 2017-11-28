@@ -1,0 +1,19 @@
+#homeaway {
+    height: 1000px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: 50px;
+    /**background-color: lightblue;**/
+}
+
+#homeawayOverlay {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    position: center;
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+    font-family: 'Nobile', Helvetica, Arial, sans-serif;
+}
+

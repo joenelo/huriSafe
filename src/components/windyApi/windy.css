@@ -1,0 +1,90 @@
+body {
+    background: url('../../images/skybackground.jpg') no-repeat center fixed;
+    background-size: cover;
+}
+
+#windyty {
+    height: 500px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: 50px;
+}
+#top {
+    text-align: center;
+
+}
+h1, h2, h3{
+    color: whitesmoke;
+    text-shadow: 2px 2px 5px black;
+    font-family: 'Corben', Georgia, Times, serif;
+}
+
+
+#windytyOverlay {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    position: center;
+    background-color: lightblue;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#play, #pause{
+    cursor: pointer;
+    padding: 0;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    background-color: whitesmoke !important;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+#play:hover {
+    box-shadow: 0 1px 6px rgba(255, 0, 0, 0.5), 0 1px 4px rgba(255, 0, 0, 0.67);
+}
+#pause:hover {
+    box-shadow: 0 1px 6px rgba(255, 0, 0, 0.5), 0 1px 4px rgba(255, 0, 0, 0.67);
+}
+#overlays a {
+
+    border: solid grey 1px;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 3px;
+    background-color: aliceblue;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Newton', Helvetica, Arial, sans-serif;
+}
+
+#overlays a:hover {
+    box-shadow: 0 1px 6px rgba(33,33,33,.2), 0 1px 4px rgba(255, 0, 0, 0.67);
+}
+
+#levels a {
+    border: solid grey 1px;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 3px;
+    background-color: aliceblue;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Newton', Helvetica, Arial, sans-serif;
+
+}
+
+#levels a:hover {
+
+    box-shadow: 0 1px 6px rgba(33,33,33,.2), 0 1px 4px rgba(255, 0, 0, 0.67);
+
+}
+
+.my-popup img {
+    width: 200px;
+    height: auto;
+}
+
+.my-popup h2 {
+    color: black;
+}
