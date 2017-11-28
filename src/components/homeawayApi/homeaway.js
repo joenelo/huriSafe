@@ -60,9 +60,6 @@ $( document ).ready(function() {
             var country = $(this)[0].location.country;
             var listingURL = $(this)[0].listingUrl;
 
-            // var listingID = $(this)[0].listingId;
-            // var listingID = $(this)[0].listingId;
-
             //================= Create the wrapper div for all the API data items.=================/
             var divCell = $("<div style=\"width: 48.25%; display: inline-block; height: 200px; border-radius: 5px; background-color: rgba(245,245,245,.6); box-shadow: 0 0 .5em .5em #ADD8E6, 0 1px 6px rgba(33,33,33,.2); margin: 10px;\"></div>");
             var unorderedList = $("<ul style=\"list-style: none; display: inline-block; width: 67%; padding-top: 10px; font-family: 'Nobile', Helvetica, Arial, sans-serif;\n\"></ul>");
@@ -74,7 +71,7 @@ $( document ).ready(function() {
             image.attr("src", secureUri);
             divCell.append(image);
 
-            // Headline Info.
+            //======================== Headline Info ====================//
             var aTag = $("<a target=\"_blank>\"</a>");
             aTag.attr("href", listingURL);
             var headlineInfo = $("<li style=' width: 100%; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; font-size: 1.5em; line-height: 2; font-family:'Newton', Helvetica, Arial, sans-serif;\n'></li>");
@@ -82,30 +79,27 @@ $( document ).ready(function() {
             headlineInfo.html(aTag);
             unorderedList.append(headlineInfo);
 
-            // Listing ID.
+            //======================== Listing ID.=====================//
             var listingIdView = $("<li></li>");
             listingIdView.html("Listing ID: " + listingID);
             unorderedList.append(listingIdView);
 
-            // Accomidation Info.
+            //================= Accomidation Info =======================//
             var accomodationInfo = $("<li style='line-height: 2'></li>");
             accomodationInfo.html("Accomodations: " + accomodations);
             unorderedList.append(accomodationInfo);
 
-
-            // Location information
+            //================= Location information ===================//
             var location = $("<li></li>");
             location.html("Location: " + city + ", " + state + ", " + country);
             unorderedList.append(location);
 
-
-            // Price view.
+            //================= Price view ====================//
             var priceView = $("<li style=' padding-top: 45px;  font-size: 1.5em  '></li>");
             priceView.html(currencyType + ": $" + priceHigh + " - $" + priceLow);
             unorderedList.append(priceView);
 
-
-            // Append the HTML API data piece to the main div.
+            //================= Append the HTML API data piece to the main div ===================//
             divCell.append(unorderedList);
             $("#homeaway").append(divCell);
         })
