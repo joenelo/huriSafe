@@ -39,8 +39,6 @@ $( document ).ready(function() {
         });
     }
 
-
-
     window.hurisafe.processLocationListings = function(response){
         console.log(response);
         var entries = response.response.entries;
@@ -113,8 +111,6 @@ $( document ).ready(function() {
         })
     }
 
-
-
     $("#showLocationListings").on("click",function(event){
         event.stopPropagation();
         var data = {
@@ -125,12 +121,8 @@ $( document ).ready(function() {
                 'distanceInKm': window.hurisafe.distanceInKm
             }
         }
-        // ajaxRequest(data);
+
     });
-
-
-
-
 
 });
 
